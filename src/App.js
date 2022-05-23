@@ -10,47 +10,29 @@
 
 // IMPORTS
 import './App.css';
+import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from "react-router-dom";
 import Header from './components/Header.js';
 import Footer from './components/Footer.js';
+import StartQuiz from './components/StartQuiz';
+import OfficeQuote from './components/OfficeQuote';
 
 function App() {
 
   // MAKE STATEFUL VARIABLES
   const [quote, setQuote] = useState([]);
 
-  // Call the API
-  // Need a proxy server
-  axios({
-    method: "GET",
-    url: 'http://proxy.hackeryou.com',
-    responseType: 'json',
-    params: {
-      reqUrl: "https://officeapi.dev/api/quotes/random",
-      proxyHeaders: {
-        "headers_params": 'value'
-      },
-      xmlToJSON: false
-    }
-  }).then((res) => {
-    console.log(res.data.data);
-  });
-
-  // useEffect(() => {
-  //   axios({
-  //     url: "https://officeapi.dev/api/quotes/random",
-  //     method: "GET",
-  //     dataResponse: "json"
-  //   }).then((response) => {
-  //     setQuote(response.data.data);
-  //   })
-  // }, []);
-
   return (
     <div className="App">
      <Header />
-
+     <StartQuiz />
+      {/* <div>
+        <Link to="/quiz-start">
+          <button className="quiz-start-button">Start</button>
+        </Link>
+      </div> */}
 
      <Footer />
     </div>
