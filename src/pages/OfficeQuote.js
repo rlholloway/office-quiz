@@ -6,7 +6,8 @@ import axios from "axios";
 const OfficeQuote = () => {
     const [ quote, setQuote ] = useState([]);
     const [ speakerFirst, setSpeakerFirst ] = useState([]);
-    const [speakerLast, setSpeakerLast] = useState([]);
+    const [ speakerLast, setSpeakerLast ] = useState([]);
+    const [ answerClicked, setAnswerClicked ] = useState(false);
     
     useEffect(() => {
         axios({
@@ -27,13 +28,18 @@ const OfficeQuote = () => {
             setSpeakerLast(res.data.data.character.lastname);
         
         });
-    }, []);
+    }, [answerClicked]);
+
+    // const handleRightClick = () => {
+    //     console.log("You clicked it!");  
+
+    // }
 
     return (
         <section className="displayQuote">
             <div className="wrapper">
                 <h3>{quote}</h3>
-                <button>{speakerFirst} {speakerLast}</button>
+                <button className="answer" onClick={ () => setAnswerClicked(!answerClicked) }>{speakerFirst} {speakerLast} { answerClicked ? "yes" : "no"}</button>
             </div>
         </section>
     );
