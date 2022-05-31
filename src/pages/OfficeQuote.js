@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Buck from '../image02.jpg';
+import NameChoice from "../components/NameChoice";
 
 // Function that holds the Office API and displays on the page
 const OfficeQuote = () => {
@@ -10,6 +11,7 @@ const OfficeQuote = () => {
     const [ speakerFirst, setSpeakerFirst ] = useState([]);
     const [ speakerLast, setSpeakerLast ] = useState([]);
     const [ answerClicked, setAnswerClicked ] = useState(false);
+    const [ wrongClicked, setWrongClicked ] = useState(false);
     const [ counter, setCounter ] = useState(0);
     
     useEffect(() => {
@@ -29,9 +31,8 @@ const OfficeQuote = () => {
             setQuote(res.data.data.content);
             setSpeakerFirst(res.data.data.character.firstname);
             setSpeakerLast(res.data.data.character.lastname);
-        
         });
-    }, [answerClicked]);
+    }, [answerClicked, wrongClicked]);
 
     const handleClick = () => {
         setAnswerClicked(!answerClicked)
@@ -39,6 +40,10 @@ const OfficeQuote = () => {
         console.log(counter);
     };
 
+    const handleWrong = () => {
+        setWrongClicked(!wrongClicked);
+        console.log("Yesssss");
+    }
 
     return (
         <section className="displayQuote">
@@ -48,9 +53,15 @@ const OfficeQuote = () => {
                 </div>
                 <div> x {counter}</div>
             </div>
+            
             <div className="wrapper">
                 <h3>{quote}</h3>
-                <button className="answer" onClick={handleClick}>{speakerFirst} {speakerLast}</button>
+                
+                <NameChoice
+                handleClick={handleClick}
+                handleWrong={handleWrong}
+                speakerFirst={speakerFirst}
+                speakerLast={speakerLast}  />
             </div>
         </section>
     );
