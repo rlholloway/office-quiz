@@ -14,6 +14,7 @@ const OfficeQuote = () => {
     const [ wrongClicked, setWrongClicked ] = useState(false);
     const [ counter, setCounter ] = useState(0);
     
+    // useEffect to stop infinite loop of re-rendering
     useEffect(() => {
         axios({
             method: "GET",
@@ -28,26 +29,31 @@ const OfficeQuote = () => {
                 xmlToJSON: false
             }
         }).then((res) => {
+            // Store data in variables
+            // Character data is tricky because first and last names are separated in API
             setQuote(res.data.data.content);
             setSpeakerFirst(res.data.data.character.firstname);
             setSpeakerLast(res.data.data.character.lastname);
         });
+        // API will re-render after user clicks either right or wrong answer
     }, [answerClicked, wrongClicked]);
 
+
+    // Click event to call API again AND add points
     const handleClick = () => {
         setAnswerClicked(!answerClicked)
         setCounter(counter + 1);
-        console.log(counter);
     };
 
+    // Click event to call API again without points
     const handleWrong = () => {
         setWrongClicked(!wrongClicked);
-        console.log("Yesssss");
     }
 
     return (
         <section className="displayQuote">
             <div className="schruteBuck">
+                {/* DIV which displays score */}
                 <div>
                     <img src={Buck} width="150" alt="A Schrute Buck" />
                 </div>
@@ -57,6 +63,7 @@ const OfficeQuote = () => {
             <div className="wrapper">
                 <h3>{quote}</h3>
                 
+                {/* LINK which generates character choice */}
                 <NameChoice
                 handleClick={handleClick}
                 handleWrong={handleWrong}

@@ -1,8 +1,7 @@
-// Create state variables for API data
-
 // Landing Page before quiz starts
 // Button to start quiz -- button to render quiz page and call the API
-// User chooses multiple choice answer
+// Create state variables for API data
+// User chooses from multiple choice answer
 // Change score accordingly AND generate next question
 
 // https://www.officeapi.dev/
