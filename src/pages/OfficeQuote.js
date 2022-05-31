@@ -10,6 +10,7 @@ const OfficeQuote = () => {
     const [ speakerFirst, setSpeakerFirst ] = useState([]);
     const [ speakerLast, setSpeakerLast ] = useState([]);
     const [ answerClicked, setAnswerClicked ] = useState(false);
+    const [ counter, setCounter ] = useState(0);
     
     useEffect(() => {
         axios({
@@ -32,17 +33,24 @@ const OfficeQuote = () => {
         });
     }, [answerClicked]);
 
+    const handleClick = () => {
+        setAnswerClicked(!answerClicked)
+        setCounter(counter + 1);
+        console.log(counter);
+    };
+
+
     return (
         <section className="displayQuote">
             <div className="schruteBuck">
                 <div>
                     <img src={Buck} width="150" alt="A Schrute Buck" />
                 </div>
-                <div> x 10</div>
+                <div> x {counter}</div>
             </div>
             <div className="wrapper">
                 <h3>{quote}</h3>
-                <button className="answer" onClick={ () => setAnswerClicked(!answerClicked) }>{speakerFirst} {speakerLast}</button>
+                <button className="answer" onClick={handleClick}>{speakerFirst} {speakerLast}</button>
             </div>
         </section>
     );
