@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Buck from '../image02.jpg';
 import NameChoice from "../components/NameChoice";
+import EndQuiz from "../components/EndQuiz";
 
 // Function that holds the Office API and displays on the page
 const OfficeQuote = () => {
@@ -69,6 +70,10 @@ const OfficeQuote = () => {
                 handleWrong={handleWrong}
                 speakerFirst={speakerFirst}
                 speakerLast={speakerLast}  />
+            </div>
+
+            <div>
+                <EndQuiz />
             </div>
         </section>
     );
