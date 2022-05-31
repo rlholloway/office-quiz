@@ -1,6 +1,6 @@
 // IMPORTS
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // Function to generate multiple choice options
 const NameChoice = (props) => {
@@ -59,11 +59,22 @@ const NameChoice = (props) => {
     });
     }, []);
 
+    // Grabs the DIV that holds the buttons and shuffles the content for them
+    const ref = useRef(null);
+
+    // Re-shuffles after each user click otherwise it only shuffles on first page load
+    useEffect(() => {
+        const parent = ref.current;
+
+        for (let i = parent.children.length; i >= 0; i--) {
+            parent.appendChild(parent.children[Math.random() * i | 0]);
+        }
+    }, [props.handleClick, props.handleWrong]);
+
 
     return (
         // DIV which holds four buttons for multiple choice answer
-        // Need to randomize button order so the correct answer can be "hidden"
-        <div>
+        <div ref={ref} className="parent">
             <button className="wrong" onClick={props.handleWrong}>{randFirstOne} {randLastOne}</button>
             <button className="wrong" onClick={props.handleWrong}>{randFirstTwo} {randLastTwo}</button>
             <button className="wrong" onClick={props.handleWrong}>{randFirstThree} {randLastThree}</button>
