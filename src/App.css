@@ -80,6 +80,47 @@ h2 {
     background-color: white;
     color: dodgerblue;
 }
+/* HOME PAGE END */
+/* SCHRUTE BUCK START */
+.schruteBuck {
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:aliceblue;
+}
+
+.schruteBuck div {
+    margin: 0 2%;
+}
+
+.counterImg {
+    width: 260px;
+}
+
+.counterText {
+    font-family: "Mulish",
+        sans-serif;
+        font-weight: bold;
+    font-size: 2rem;
+}
+/* SCHRUTE BUCK END */
+/* QUIZ START */
+.displayQuote {
+    background-image: url("../public/assets/white-lined-sheet-notepad-crumpled-paper-background_35652-234.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h3 {
+    margin: 0;
+    padding: 5%;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    line-height: 80px;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
 
 /* FOOTER START */
 footer {

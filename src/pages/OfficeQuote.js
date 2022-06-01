@@ -8,13 +8,13 @@ import EndQuiz from "../components/EndQuiz";
 // Function that holds the Office API and displays on the page
 const OfficeQuote = () => {
     // Stateful variables
-    const [ quote, setQuote ] = useState([]);
-    const [ speakerFirst, setSpeakerFirst ] = useState([]);
-    const [ speakerLast, setSpeakerLast ] = useState([]);
-    const [ answerClicked, setAnswerClicked ] = useState(false);
-    const [ wrongClicked, setWrongClicked ] = useState(false);
-    const [ counter, setCounter ] = useState(0);
-    
+    const [quote, setQuote] = useState([]);
+    const [speakerFirst, setSpeakerFirst] = useState([]);
+    const [speakerLast, setSpeakerLast] = useState([]);
+    const [answerClicked, setAnswerClicked] = useState(false);
+    const [wrongClicked, setWrongClicked] = useState(false);
+    const [counter, setCounter] = useState(0);
+
     // useEffect to stop infinite loop of re-rendering
     useEffect(() => {
         axios({
@@ -52,24 +52,28 @@ const OfficeQuote = () => {
     }
 
     return (
-        <section className="displayQuote">
+        <section>
             <div className="schruteBuck">
                 {/* DIV which displays score */}
                 <div>
-                    <img src={Buck} width="150" alt="A Schrute Buck" />
+                    <img className="counterImg" src={Buck} width="150" alt="A Schrute Buck" />
                 </div>
-                <div> x {counter}</div>
+                <div>
+                    <p className="counterText">x {counter}</p>
+                </div>
             </div>
-            
-            <div className="wrapper">
-                <h3>{quote}</h3>
-                
-                {/* LINK which generates character choice */}
-                <NameChoice
-                handleClick={handleClick}
-                handleWrong={handleWrong}
-                speakerFirst={speakerFirst}
-                speakerLast={speakerLast}  />
+
+            <div className="displayQuote">
+                <div className="wrapper">
+                    <h3>〝 {quote} 〞</h3>
+
+                    {/* LINK which generates character choice */}
+                    <NameChoice
+                        handleClick={handleClick}
+                        handleWrong={handleWrong}
+                        speakerFirst={speakerFirst}
+                        speakerLast={speakerLast} />
+                </div>
             </div>
 
             <div>
@@ -77,6 +81,6 @@ const OfficeQuote = () => {
             </div>
         </section>
     );
-    }
+}
 
 export default OfficeQuote;
