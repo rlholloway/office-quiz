@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 // Button that brings user back to Home Page
 const EndQuiz = () => {
     return (
-        <Link to="/">
-            <button>End Quiz</button>
-        </Link>
+        <div className="wrapper">
+            <Link to="/">
+                <button className="endButton">End Quiz</button>
+            </Link>
+        </div>
     )
 }
 

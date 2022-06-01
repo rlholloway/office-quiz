@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 // Button that brings user to Quiz
 const StartQuiz = () => {
     return (
-        <Link to="/office">
-            <button>Click Me!!!!</button>
-        </Link>
+        <div className="wrapper">
+            <h2>Can you remember which Office character said the following quotes? </h2>
+            <h2>Test your memory with this fun quiz!</h2>
+            <Link to="/office">
+                <button className="startButton">Start Quiz</button>
+            </Link>
+        </div>
     )
 }
 
