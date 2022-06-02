@@ -540,6 +540,7 @@ footer p {
     h3 {
         padding: 2%;
         font-size: 2.5rem;
+        line-height: 60px;
     }
 
     .parent button {
@@ -593,6 +594,7 @@ footer p {
     h3 {
         padding: 2%;
         font-size: 2.2rem;
+        line-height: 50px;
     }
 
     .parent {
@@ -606,9 +608,14 @@ footer p {
 
 /* THIRD BREAK POINT */
 @media (max-width: 895px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
     .underline {
+        height: 8px;
         top: 65%;
-        left: 55%;
+        left: 54%;
     }
 
     @keyframes lining {
@@ -623,15 +630,6 @@ footer p {
         100% {
             width: 0;
         }
-    }
-
-    h2 {
-        font-size: 1.3rem;
-    }
-
-    .startButton,
-    .endButton {
-        width: 25%;
     }
 
     .counterImg {
@@ -657,5 +655,138 @@ footer p {
 
     footer p {
         font-size: 2rem;;
+    }
+}
+
+/* FOURTH BREAK POINT */
+@media (max-width: 775px) {
+    h1 {
+        margin: 0 auto;
+        font-size: 4rem;
+        width: 60%;
+        padding: 5% 2%; 
+    }
+
+    .underline {
+        top: 60%;
+        left: 54%;
+    }
+
+    @keyframes lining {
+        0% {
+            width: 0;
+        }
+
+        50% {
+            width: 19%;
+        }
+
+        100% {
+            width: 0;
+        }
+    }
+
+    .parent button {
+        margin: 3%;
+    }
+
+    footer p {
+        font-size: 1.5rem;
+    }
+}
+
+/* FIFTH BREAK POINT */
+@media (max-width: 650px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .startButton,
+    .endButton {
+        font-size: 1.2rem;
+        margin: 2%;
+        padding: 6px;
+        width: 30%;
+    }
+
+    .counterImg {
+        width: 155px;
+    }
+    
+    .counterText {
+        font-size: 1.5rem;
+    }
+}
+
+/* SIXTH BREAK POINT */
+@media (max-width: 572px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .underline {
+        height: 6px;
+    }
+
+    .questionBox h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        margin: 2% 0;
+    }
+
+    .parent button {
+        height: 65px;
+    }
+    
+    footer p {
+        font-size: 1.2rem;
+    }
+}
+
+/* SEVENTH BREAK POINT */
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.1rem;
+    }
+
+    .startButton,
+    .endButton {
+        font-size: 1rem;
+    }
+
+    .questionBox h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        line-height: 45px;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/* EIGHTH BREAK POINT */
+@media (max-width: 420px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    .startButton,
+    .endButton {
+        width: 34%;
+        margin: 5%;
     }
 }
