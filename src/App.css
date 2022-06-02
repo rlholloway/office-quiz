@@ -455,10 +455,6 @@ h3 {
 /* QUIZ END */
 /* FOOTER START */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     margin-top: 2%;
     padding: 1%;
     background-color: black;

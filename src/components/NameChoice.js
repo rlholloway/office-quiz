@@ -33,7 +33,7 @@ const NameChoice = (props) => {
     useEffect(() => {
     axios({
         method: "GET",
-        url: 'http://proxy.hackeryou.com',
+        url: 'https://proxy.hackeryou.com',
         responseType: 'json',
         params: {
             limit: 1,
