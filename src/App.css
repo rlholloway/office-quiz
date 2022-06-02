@@ -51,7 +51,35 @@ h1 {
 .who {
     font-style: italic;
     margin-right: 1%;
-    text-decoration: underline;
+    /* text-decoration: underline; */
+}
+
+.titleBox {
+    position: relative;
+}
+
+.underline {
+    width: 30px;
+    height: 12px;
+    background-color: red;
+    border-radius: 5px;
+    position: absolute;
+    top: 59.5%;
+    left: 54%;
+    animation: snow 5s ease-in-out infinite;
+}
+
+@keyframes snow {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 17%;
+    }
+
+    100% {
+        width: 0;
+    }
 }
 
 h2 {
@@ -102,9 +130,21 @@ h2 {
     font-family: "Mulish",
         sans-serif;
         font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.6rem;
 }
 /* SCHRUTE BUCK END */
+/* QUESTION BOX START */
+.questionBox {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.questionBox h2 {
+    font-family: 'Shadows Into Light Two',
+        cursive;
+}
+
+/* QUESTION BOX END */
 /* QUIZ START */
 .displayQuote {
     background-image: url("../public/assets/white-lined-sheet-notepad-crumpled-paper-background_35652-234.webp");
@@ -154,6 +194,7 @@ h3 {
     background-color: lawngreen;
 }
 
+/* QUIZ END */
 /* FOOTER START */
 footer {
     margin-top: 2%;

@@ -4,6 +4,7 @@ import axios from "axios";
 import Buck from '../image02.jpg';
 import NameChoice from "../components/NameChoice";
 import EndQuiz from "../components/EndQuiz";
+import QuestionCounter from "../components/QuestionCounter";
 
 // Function that holds the Office API and displays on the page
 const OfficeQuote = () => {
@@ -14,6 +15,7 @@ const OfficeQuote = () => {
     const [answerClicked, setAnswerClicked] = useState(false);
     const [wrongClicked, setWrongClicked] = useState(false);
     const [counter, setCounter] = useState(0);
+    const [qCounter, setQCounter] = useState(1);
 
     // useEffect to stop infinite loop of re-rendering
     useEffect(() => {
@@ -44,11 +46,13 @@ const OfficeQuote = () => {
     const handleClick = () => {
         setAnswerClicked(!answerClicked)
         setCounter(counter + 1);
+        setQCounter(qCounter + 1);
     };
 
     // Click event to call API again without points
     const handleWrong = () => {
         setWrongClicked(!wrongClicked);
+        setQCounter(qCounter + 1);
     }
 
     return (
@@ -63,8 +67,13 @@ const OfficeQuote = () => {
                 </div>
             </div>
 
+
             <div className="displayQuote">
                 <div className="wrapper">
+                    <div className="questionBox">
+                        <QuestionCounter
+                            qCounter={qCounter} />
+                    </div>
                     <h3>〝{quote}〞</h3>
 
                     {/* LINK which generates character choice */}
