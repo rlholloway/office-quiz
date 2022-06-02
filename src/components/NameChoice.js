@@ -74,7 +74,7 @@ const NameChoice = (props) => {
 
     return (
         // DIV which holds four buttons for multiple choice answer
-        <div ref={ref} className="parent">
+        <div ref={ref} className="parent wrapper">
             <button className="wrong" onClick={props.handleWrong}>{randFirstOne} {randLastOne}</button>
             <button className="wrong" onClick={props.handleWrong}>{randFirstTwo} {randLastTwo}</button>
             <button className="wrong" onClick={props.handleWrong}>{randFirstThree} {randLastThree}</button>

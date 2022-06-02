@@ -65,7 +65,7 @@ const OfficeQuote = () => {
 
             <div className="displayQuote">
                 <div className="wrapper">
-                    <h3>〝 {quote} 〞</h3>
+                    <h3>〝{quote}〞</h3>
 
                     {/* LINK which generates character choice */}
                     <NameChoice
