@@ -1,6 +1,5 @@
 // IMPORTS
 import { useEffect, useState } from "react";
-import axios from "axios";
 import Buck from '../image02.jpg';
 import NameChoice from "../components/NameChoice";
 import EndQuiz from "../components/EndQuiz";
@@ -289,6 +288,66 @@ const OfficeQuote = () => {
         }, {
             quote: "In the gang world, we use something called Fluffy Fingers. That's when somebody really gets in your face, you know, you just... start tickling them and then he starts tickling you.You know, pretty soon you're laughing and hugging. Before you know it, you've forgotten the whole thing. Ya'll can just go to church together... get an ice cream cone.",
             name: "Darryl Philbin"
+        }, {
+            quote: "Gum's gotten mintier lately. Have you noticed? Like, some of it's just too minty.",
+            name: "Nate Nickerson"
+        }, {
+            quote: "I don't technically have a hearing problem but sometimes when there's a lot of noises occuring at the same time, I'll hear 'em as one big jumble. Uh, again, it's not that I CAN'T hear, uh, because that's false, I can. Um, I just can't distinguish between everything I'm hearing.",
+            name: "Nate Nickerson"
+        }, {
+            quote: "You had me at 'clookies'... I can't wait to find out what they are.",
+            name: "Nate Nickerson"
+        }, {
+            quote: "Do we get our resumes back or do you keep them? Because I only have the one and I have a chilli recipe on the back that I really want to keep.",
+            name: "Nate Nickerson"
+        }, {
+            quote: "When you use a ridiculous font, no one thinks you have a plan.",
+            name: "Nellie Bertram"
+        }, {
+            quote: "Everyone meet in the hotel bar at 7:00. I'm not allowed to say it's mandatory, so let's just call it compulsory.",
+            name: "Nellie Bertram"
+        }, {
+            quote: "WI have one simple philosophy in business: if the seat is open, the job is open. It's how I came to briefly race a Formula One car. The three slowest laps ever recorded.",
+            name: "Nellie Bertram"
+        }, {
+            quote: "I knew this would happen! Everybody told me if I moved to America, I'd be murdered.",
+            name: "Nellie Bertram"
+        }, {
+            quote: "I will not be blackmailed by some ineffectual, privileged, effete, soft-penised debutante. You wanna start a street fight with me, bring it on, but you're gonna be surprised by how ugly it gets. You don't even know my real name. I'm the [bleep]-ing lizard king.",
+            name: "Robert California"
+        }, {
+            quote: "I had a one-man saturnalia last night, in celebration of the finalization of my divorce. I got into a case of Australian reds, and... how should I say this... Colombian whites.",
+            name: "Robert California"
+        }, {
+            quote: "I had two bears sewn together to make this king-size. Total waste of two bears.",
+            name: "Robert California"
+        }, {
+            quote: "Women reach their sexual peak at whatever age Jan was last week. I mean it was... like making love with a wild animal. But not like a cougar like you might think. It was, uh, like a swarm of bees. Bees that just find something wrong with every hotel room.",
+            name: "Clark Green"
+        }, {
+            quote: "So, this is how we look now. I hope you like being turned on all the time.",
+            name: "Clark Green"
+        }, {
+            quote: "One of my jobs is to input customer complaints into the computer. And when they're in, I fill out one of these cards. But the information's already on the computer, so why am I filling out the card? I asked Andy, and he told me to 'chillax' and then went away on a big, long boat ride. So here we are. Don't give me a pointless office chore, because I will build a little paper house. Fight the power.",
+            name: "Pete Miller"
+        }, {
+            quote: "Erin says she's gonna break up with Andy, but I'm not sure. He's coming back tomorrow and surprise, today, she wants to do whatever I'd like. You know, when I was a kid, we had a dog who got real sick and we had to 'send him to a farm'. And on his last day, we did everything he loved.",
+            name: "Pete Miller"
+        }, {
+            quote: "It's kind of a good news, bad news situation. The bad news is we're not doing very well, so we really had to starve ourselves this whole week. But the good news is that all the other branches are doing just as bad as we are. So corporate upped the prize to 5 days. So if we stay fat long enough, we may actually get a whole month off.",
+            name: "Holly Flax"
+        }, {
+            quote: "I cannot keep myself from Michael. Everything he does is sexy. He has this undeniable animal magnetism. He's a jungle cat. The man exudes sex. He can put both his legs behind his head.",
+            name: "Holly Flax"
+        }, {
+            quote: "It's great to be among friends, and until then, you suckers will do!",
+            name: "Todd Packer"
+        }, {
+            quote: "Oh, you don't become the most powerful woman in Tallahassee by slacking off. [scoffs] You do it by working hard. Or marrying rich. I did both!",
+            name: "Jo Bennett"
+        }, {
+            quote: "I'm not really into strippers. You know what I find sexy? Pam's art. She's an artist and I appreciate that. It's very moving and sexy, the art.",
+            name: "Roy Anderson"
         }];
 
         const sourceLength = quoteSource.length;
