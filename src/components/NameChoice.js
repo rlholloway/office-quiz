@@ -23,7 +23,8 @@ const NameChoice = (props) => {
         return array;
     }
 
-    // Calling the API again SPECIFICALLY for the list of characters
+    // Calling the array again SPECIFICALLY for the list of characters
+    // Re-shuffles after each user click otherwise it only shuffles on first page load
     useEffect(() => {
         const quoteSource = [{
             quote: "I'm not superstitious, but... I'm a little-stitious.",
@@ -305,11 +306,12 @@ const NameChoice = (props) => {
         setRandNameTwo(nameArray[1].name);
 
         setRandNameThree(nameArray[2].name);
-    }, []);
+    }, [props.handleClick, props.handleWrong]);
 
     // Grabs the DIV that holds the buttons and shuffles the content for them
     const ref = useRef(null);
 
+    // Shuffles the placement of each name
     // Re-shuffles after each user click otherwise it only shuffles on first page load
     useEffect(() => {
         const parent = ref.current;
