@@ -1,5 +1,4 @@
 /* SETUP */
-
 html {
     line-height: 1.15;
     -ms-text-size-adjust: 100%;
@@ -277,6 +276,10 @@ html {
     font-family: "Mulish", sans-serif;
 }
 
+.App {
+    height: 100vh;
+}
+
 .wrapper {
     max-width: 1200px;
     width: 80%;
@@ -343,6 +346,20 @@ h2 {
     font-family: "Mulish", sans-serif;
     font-size: 3rem;
     text-align: center;
+}
+
+.h2-top {
+    margin-top: 10%;
+    margin-bottom: 4%;
+}
+
+.h2-bottom {
+    margin-top: 4%;
+    margin-bottom: 8%;
+}
+
+.container {
+    min-height: calc(100vh - 63px);
 }
 
 .startButton,
@@ -457,6 +474,7 @@ h3 {
 footer {
     margin-top: 2%;
     padding: 1%;
+    width: 100%;
     background-color: black;
     color: white;
     font-family: "Bebas Neue", cursive;
@@ -530,7 +548,8 @@ footer p {
 
     .startButton,
     .endButton {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        width: 22%;
     }
 
     .questionBox h2 {
@@ -582,7 +601,7 @@ footer p {
     .counterImg {
         width: 175px;
     }
-    
+
     .counterText {
         font-size: 2rem;
     }
@@ -602,7 +621,8 @@ footer p {
     }
 
     footer p {
-        font-size: 2rem;;
+        font-size: 2rem;
+        ;
     }
 }
 
@@ -632,10 +652,15 @@ footer p {
         }
     }
 
+    .startButton,
+    .endButton {
+        width: 25%;
+    }
+
     .counterImg {
         width: 175px;
     }
-    
+
     .counterText {
         font-size: 2rem;
     }
@@ -654,7 +679,8 @@ footer p {
     }
 
     footer p {
-        font-size: 2rem;;
+        font-size: 2rem;
+        ;
     }
 }
 
@@ -664,7 +690,7 @@ footer p {
         margin: 0 auto;
         font-size: 4rem;
         width: 60%;
-        padding: 5% 2%; 
+        padding: 5% 2%;
     }
 
     .underline {
@@ -684,6 +710,11 @@ footer p {
         100% {
             width: 0;
         }
+    }
+
+    .startButton,
+    .endButton {
+        width: 28%;
     }
 
     .parent button {
@@ -712,7 +743,7 @@ footer p {
     .counterImg {
         width: 155px;
     }
-    
+
     .counterText {
         font-size: 1.5rem;
     }
@@ -740,7 +771,7 @@ footer p {
     .parent button {
         height: 65px;
     }
-    
+
     footer p {
         font-size: 1.2rem;
     }
@@ -758,7 +789,8 @@ footer p {
 
     .startButton,
     .endButton {
-        font-size: 1rem;
+        font-size: 1.2rem;
+        width: 32%;
     }
 
     .questionBox h2 {

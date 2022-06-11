@@ -20,12 +20,14 @@ function App() {
 
   return (
     <div className="App">
-     <Header />
-     <Routes>
-        <Route path="/" element={<StartQuiz />} />
-        <Route path="/office" element={<OfficeQuote />} />
-     </Routes>
-     <Footer />
+      <Header />
+      <main className='container'>
+        <Routes>
+          <Route path="/" element={<StartQuiz />} />
+          <Route path="/office" element={<OfficeQuote />} />
+        </Routes>
+      </main>
+      <Footer />
     </div>
   );
 }
