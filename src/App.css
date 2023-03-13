@@ -461,13 +461,15 @@ h3 {
     transform: scale(1.2);
 }
 
-.wrong:active {
+/* TURNED OFF COLOUR CHANGES
+NEED TO ADD POP-UP EVENT INSTEAD TO SHOW USER IF THE QUESTION IS RIGHT OR WRONG */
+/* .wrong:active {
     background-color: red;
 }
 
 .answer:active {
     background-color: lawngreen;
-}
+} */
 
 /* QUIZ END */
 /* FOOTER START */
